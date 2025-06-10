@@ -1,0 +1,103 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: webapplication1-deployment
+  labels:
+    app: webapplication1
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: webapplication1
+  template:
+    metadata:
+      labels:
+        app: webapplication1
+    spec:
+      containers:
+      - name: webapplication1
+        # Reemplaza con tu Azure Container Registry y nombre de imagen
+        image: <tu-acr-name>.azurecr.io/webapplication1:latest
+        ports:
+        - containerPort: 8080
+        env:
+        - name: ASPNETCORE_ENVIRONMENT
+          value: "Production"
+        - name: ASPNETCORE_URLS
+          value: "http://+:8080"
+        - name: ASPNETCORE_REQUESTTIMEOUT
+          value: "00:10:00"
+        - name: ASPNETCORE_KESTREL__LIMITS__KEEPALIVETIMEOUT
+          value: "00:10:00"
+        - name: ASPNETCORE_KESTREL__LIMITS__REQUESTHEADERSTIMEOUT
+          value: "00:10:00"
+        - name: ASPNETCORE_KESTREL__LIMITS__REQUESTBODYTIMEOUT
+          value: "00:10:00"
+        resources:
+          requests:
+            memory: "256Mi"
+            cpu: "250m"
+          limits:
+            memory: "512Mi"
+            cpu: "500m"
+        livenessProbe:
+          httpGet:
+            path: /weatherforecast
+            port: 8080
+          initialDelaySeconds: 30
+          periodSeconds: 30
+          timeoutSeconds: 30
+          failureThreshold: 5
+        readinessProbe:
+          httpGet:
+            path: /weatherforecast
+            port: 8080
+          initialDelaySeconds: 5
+          periodSeconds: 15
+          timeoutSeconds: 30
+          failureThreshold: 3
+      imagePullSecrets:
+      - name: acr-secret
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: webapplication1-service
+  labels:
+    app: webapplication1
+  annotations:
+    service.beta.kubernetes.io/azure-load-balancer-tcp-idle-timeout: "600"
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 80
+    targetPort: 8080
+    protocol: TCP
+    name: http
+  selector:
+    app: webapplication1
+---
+# Opcional: Ingress para exponer la aplicación con un dominio personalizado
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: webapplication1-ingress
+  annotations:
+    kubernetes.io/ingress.class: "nginx"
+    nginx.ingress.kubernetes.io/rewrite-target: /
+    nginx.ingress.kubernetes.io/proxy-connect-timeout: "600"
+    nginx.ingress.kubernetes.io/proxy-send-timeout: "600"
+    nginx.ingress.kubernetes.io/proxy-read-timeout: "600"
+    nginx.ingress.kubernetes.io/proxy-body-size: "50m"
+spec:
+  rules:
+  - host: webapplication1.yourdomain.com  # Cambia por tu dominio
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: webapplication1-service
+            port:
+              number: 80

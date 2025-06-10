@@ -5,8 +5,9 @@
 
 FROM mcr.microsoft.com/dotnet/sdk:8.0.201-bookworm-slim-amd64 AS base
 WORKDIR /app
-EXPOSE 80
+EXPOSE 8080
 EXPOSE 443
+EXPOSE 80
 
 FROM mcr.microsoft.com/dotnet/sdk:8.0.201-bookworm-slim-amd64 AS build
 ARG BUILD_CONFIGURATION=Release
