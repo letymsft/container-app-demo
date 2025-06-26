@@ -25,3 +25,26 @@ Antes de comenzar, asegúrate de contar con lo siguiente:
 - Un repositorio ya creado en GitHub que contenga o esté relacionado con ese proyecto.
 
 > Nota: Si aún no tienes un repositorio, puedes crearlo desde tu cuenta de GitHub haciendo clic en “New repository” y siguiendo los pasos del asistente.
+
+## 🧪 Guía de Uso
+
+Sigue estos pasos para comenzar a trabajar con Copilot Agents en un escenario real:
+
+1. **Crear un nuevo proyecto**  
+   Inicia un nuevo proyecto desde tu herramienta o repositorio favorito. En este ejemplo, nómbralo:  
+   **`Monitoreo Aplicativo`**
+
+2. **Generar una nueva tarea**  
+   Dentro del proyecto, crea una tarea específica para abordar la integración del monitoreo. Usa el siguiente nombre:  
+   **`Implementación de monitoreo en el módulo`**
+
+3. **Asignar la tarea a Copilot**  
+   Para que el agente pueda ayudarte, asigna la tarea escribiendo en el cuerpo o descripción:  
+   **`@copilot`**  
+   Esto permite que el agente comience a sugerir soluciones, líneas de código o documentación relevante en contexto.
+   
+![image](https://github.com/user-attachments/assets/835cd6b7-abb7-45a2-b60c-49792051319f)
+
+> 💡 Sugerencia: Si usas GitHub Projects o Issues, puedes crear esta tarea como un *issue* y mencionarlo con `@copilot` directamente en los comentarios para activar la colaboración.
+> 
+
