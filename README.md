@@ -48,3 +48,18 @@ Sigue estos pasos para comenzar a trabajar con Copilot Agents en un escenario re
 > 💡 Sugerencia: Si usas GitHub Projects o Issues, puedes crear esta tarea como un *issue* y mencionarlo con `@copilot` directamente en los comentarios para activar la colaboración.
 > 
 
+Una vez que inicie las actividades Copilot en modo Agente, se creará una notificación y también se podrá ver el estado de la ejecución por medio del botón View Session.
+
+![image](https://github.com/user-attachments/assets/08712f83-a60a-45e2-b484-0305400c721b)
+
+En la sesión del agente podrás encontrar el tiempo de ejecución, las tareas que se están desarrollando, así como el detalle de los cambios para cada archivo dentro de la solucíón.
+
+![image](https://github.com/user-attachments/assets/1c730e9b-cf31-4575-ad88-810ddf3e6e7c)
+
+Una vez que haya terminado la ejecución, se notifica en la ventana y se muestra el pull request
+
+![image](https://github.com/user-attachments/assets/0e082b76-da62-492d-81d7-f3d39b64b616)
+
+
+
+
