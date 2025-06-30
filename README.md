@@ -52,7 +52,7 @@ Una vez que inicie las actividades Copilot en modo Agente, se creará una notifi
 
 ![image](https://github.com/user-attachments/assets/08712f83-a60a-45e2-b484-0305400c721b)
 
-En la sesión del agente podrás encontrar el tiempo de ejecución, las tareas que se están desarrollando, así como el detalle de los cambios para cada archivo dentro de la solucíón.
+En la sesión del agente podrás encontrar la rama de trabajo creada por Copilot, el tiempo de ejecución, las tareas que se están desarrollando, así como el detalle de los cambios para cada archivo dentro de la solucíón.
 
 ![image](https://github.com/user-attachments/assets/1c730e9b-cf31-4575-ad88-810ddf3e6e7c)
 
