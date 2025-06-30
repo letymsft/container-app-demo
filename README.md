@@ -66,9 +66,12 @@ Una vez que haya terminado la ejecución, se notifica en la ventana y se muestra
 En el pull request podrás ver el detalle de los cambios, así como la solicitud para realizar el merge en la rama principal de la solución:
 ![image](https://github.com/user-attachments/assets/30d1ee00-11ee-4f07-9952-06d8f7b3ec97)
 
-En la sección de Cambios de Archivo (Files changed) del Pull Request, podrás ver un comparativo de la versión original vs la versión actualizada ejecutada por el agente de Copilot para que puedas realizar una revisión del trabajo realizado. Por medio de indicadores de color (Rojo y Verde se muestra el detalle de lo que se eliminará y lo que agregará dentro de la solución.
+En la sección de Cambios de Archivo (Files changed) del Pull Request, podrás ver un comparativo de la versión original vs la versión actualizada ejecutada por el agente de Copilot para que puedas realizar una revisión del trabajo realizado. Por medio de indicadores de color (Rojo y Verde se muestra el detalle de lo que se eliminará y lo que agregará dentro de la solución. Por las instrucciones que se le dieron al agente, se integra las instrucciones de Logger dentro del código de la clase para solventar la solicitud realizada.
 ![image](https://github.com/user-attachments/assets/74412486-d372-4f7a-ad55-46fc87857cb1)
 
+Ahora, siéntente con la libertad de revisar, cambiar, aceptar o rechazar los cambios realizados en tu solución. Ya parte del trabajo está hecho y tu puedes avanzar con otras tareas.
+
+## **¡Copilot Agent está aquí para ayudarte!**
 
 
 
