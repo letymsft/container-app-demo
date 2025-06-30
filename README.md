@@ -53,12 +53,23 @@ Una vez que inicie las actividades Copilot en modo Agente, se creará una notifi
 ![image](https://github.com/user-attachments/assets/08712f83-a60a-45e2-b484-0305400c721b)
 
 En la sesión del agente podrás encontrar la rama de trabajo creada por Copilot, el tiempo de ejecución, las tareas que se están desarrollando, así como el detalle de los cambios para cada archivo dentro de la solucíón.
+Rama de trabajo:
+![image](https://github.com/user-attachments/assets/96941acc-5d26-4410-be4f-3ee1961dec13)
 
+Pasos de la ejecución de tareas del agente:
 ![image](https://github.com/user-attachments/assets/1c730e9b-cf31-4575-ad88-810ddf3e6e7c)
 
 Una vez que haya terminado la ejecución, se notifica en la ventana y se muestra el pull request
 
 ![image](https://github.com/user-attachments/assets/0e082b76-da62-492d-81d7-f3d39b64b616)
+
+En el pull request podrás ver el detalle de los cambios, así como la solicitud para realizar el merge en la rama principal de la solución:
+![image](https://github.com/user-attachments/assets/30d1ee00-11ee-4f07-9952-06d8f7b3ec97)
+
+En la sección de Cambios de Archivo (Files changed) del Pull Request, podrás ver un comparativo de la versión original vs la versión actualizada ejecutada por el agente de Copilot para que puedas realizar una revisión del trabajo realizado. Por medio de indicadores de color (Rojo y Verde se muestra el detalle de lo que se eliminará y lo que agregará dentro de la solución.
+![image](https://github.com/user-attachments/assets/74412486-d372-4f7a-ad55-46fc87857cb1)
+
+
 
 
 
